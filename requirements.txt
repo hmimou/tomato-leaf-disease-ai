@@ -1,0 +1,8 @@
+flask
+python-dotenv
+requests
+gunicorn
+openai
+torch
+torchvision
+Pillow

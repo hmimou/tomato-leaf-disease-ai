@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tomato Leaf Disease Detector</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🍅 Tomato Leaf Disease Detection</h1>
+
+<div class="main-box">
+
+    <div class="left-panel">
+
+        <input type="file" id="imageInput" accept="image/*">
+
+        <div class="preview">
+            <img id="previewImage">
+        </div>
+
+        <button id="predictBtn">Predict Disease</button>
+        <p id="loading" style="color: blue; font-style: italic;"></p>
+        <button id="treatmentBtn">Get Treatment</button>
+
+        <h3 id="prediction"></h3>
+
+    </div>
+
+    <div class="right-panel">
+
+        <h3>Treatment Advice</h3>
+
+        <div id="treatmentBox">
+            Waiting for prediction...
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
