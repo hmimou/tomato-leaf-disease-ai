@@ -17,6 +17,27 @@ This project is a web application that detects tomato leaf diseases using a deep
 - JavaScript
 - OpenRouter AI agent
 
+ ## Deliverables
+    1) Data Pipeline
+
+    Ingestion: Collected tomato leaf images from plantvillage dataset.
+
+    Cleaning: Removed duplicated images and blurry images, standardized image size and format.
+
+    Annotation: Labels assigned for each disease class.
+
+    Dataset Build: Split into training, validation, and test sets.
+
+    All steps implemented in training/tomato_training.ipynb.
+
+    2) Model Training Workflow
+
+    Model: ResNet18 fine-tuned on tomato leaf disease dataset.
+
+    Training: Implemented with PyTorch, including data augmentation.
+
+    Checkpoint: Saved best model as models/model.pth.
+
 ## How to Run
 
 1. Clone the repository

@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tomato Leaf Disease Detector</title>
+    <title>TomatoLeaf Doctor</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
 <body>
 
-<div class="container">
+<div class="overlay">
 
-<h1>🍅 Tomato Leaf Disease Detection</h1>
+<header class="header">
+    <h2>🌿 TomatoLeaf Doctor</h2>
+</header>
 
-<div class="main-box">
+<div class="main-container">
 
-    <div class="left-panel">
+<!-- LEFT CARD -->
+<div class="card">
 
-        <input type="file" id="imageInput" accept="image/*">
+<h3>Step 1: Upload Your Tomato Leaf Image</h3>
 
-        <div class="preview">
-            <img id="previewImage">
-        </div>
+<div class="upload-box" id="uploadBox">
 
-        <button id="predictBtn">Predict Disease</button>
-        <p id="loading" style="color: blue; font-style: italic;"></p>
-        <button id="treatmentBtn">Get Treatment</button>
+    <!-- hidden file input -->
+    <input type="file" id="imageInput" accept="image/*" hidden>
 
-        <h3 id="prediction"></h3>
+    <img id="previewImage">
 
-    </div>
+</div>
 
-    <div class="right-panel">
+<button id="uploadBtn">Upload Image</button>
 
-        <h3>Treatment Advice</h3>
+</div>
 
-        <div id="treatmentBox">
-            Waiting for prediction...
-        </div>
 
-    </div>
+<!-- RIGHT CARD -->
+<div class="card">
+
+<h3>Step 2: Analysis & Treatment.</h3>
+
+<button id="predictBtn">PREDICT DISEASE & TREAT</button>
+
+<p id="loading"></p>
+
+<div class="result">
+
+<p>Disease Name: <span id="diseaseName">-</span></p>
+
+<p>
+Confidence Score:
+<span id="confidence">-</span>
+<span class="bars">📊</span>
+</p>
+
+<p>
+Status:
+<span id="status" class="status-box">-</span>
+</p>
+
+</div>
+
+<button id="treatmentBtn">ASK AGENT ABOUT TREATMENT</button>
+
+<div id="treatmentBox"></div>
+
+</div>
 
 </div>
 
